@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Fileira 1 -->
+        <div class="row">
+            <div class="card">Presente 1</div>
+            <div class="card">Presente 2</div>
+            <div class="card">Presente 3</div>
+        </div>
+
+        <!-- Fileira 2 -->
+        <div class="row">
+            <div class="card">Presente 4</div>
+            <div class="card">Presente 5</div>
+            <div class="card">Presente 6</div>
+        </div>
+
+        <!-- Adicione mais fileiras conforme necessário... -->
+    </div>
+</body>
+</html>

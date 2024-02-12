@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;            
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+            background-image: url(fundos/fundomadeira.jpg);
+            background-size: cover;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            position: relative;
+            max-width: 200px;
+            width: 100%;
+            height: 100%;
+            padding: 15px 10px 23px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .card img {
+            border: 1px solid black;
+            max-width: 100%;
+            height: 85%;
+            border-radius: 8px;
+        }
+
+        .start-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: wheat;
+            color: black;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transform: translateY(80px);
+        }
+
+        .start-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <p style="
+    transform: translateY(-61px);
+    background-color: wheat;
+">Boas vindas à lista de chá de panela de Iris e João! Aqui você poderá ver e escolher algum dos possíveis presentes da lista...</p>
+    <div class="card-container">
+        <div class="card" style="
+        transform: rotate(345deg);">
+            <img src="fotos/irisjoao1.jpg" alt="Foto Polaroid 1" />
+        </div>
+        <div class="card" style="
+        transform: translateY(-40px);">
+            <img src="fotos/irisjoao2.jpg" alt="Foto Polaroid 2" />
+        </div>
+        <div class="card" style="
+        transform: rotate(15deg);">
+            <img src="fotos/irisjoao3.jpg" alt="Foto Polaroid 3" />
+        </div>
+    </div>
+    <a href="index-teste.html">
+        <button class="start-button">Começar</button>
+    </a>
+</body>
+</html>

@@ -1,0 +1,305 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Aplicando a fonte Montserrat */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url(fundos/fundomadeira.jpg);
+    background-size: contain;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 15px;
+    text-align: left;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    height: 300px;
+    transition: 0.4s all;
+    font-size:small;
+    font-weight: bold;
+
+    /* Adicionando efeitos de polaroid */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    border: 0.5px solid;
+    border-color: grey;
+    max-width: 100%;
+    height: 210px;
+}
+
+.card p {
+    max-width: 58%;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.card:hover {
+    border-color: #C78C19;
+    transform: scale(1.05);
+}
+
+.card-button {
+    position: relative;
+    padding: 10px 15px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.organizador {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /*background-color: rgb(0,0,0);  Fallback color */
+    /*background-color: rgba(0,0,0,0.4);  Black w/ opacity */
+    background: rgba( 0, 0, 0, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+  }
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    /* padding: 15px; */
+    text-align: left;
+    width: 500px;
+    box-sizing: border-box;
+    height: 300px;
+    transition: 0.4s all;
+    font-size:small;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content img {
+    border: 0.5px solid;
+    border-color: grey;
+    width: 53%;
+    height: 89%;
+    max-width: 100%;
+    margin-left: 15px;
+    left: 0;
+}
+
+.modal-content p {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+
+}
+
+.botoesetexto {
+    flex: 1;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes p {
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content button {
+    background-color: white;
+    margin: 10px 5px;
+    border-radius: 10px;
+    height: 47px;
+    transition: 0.4s all;
+}
+
+.modal-content button:hover {
+    background-color: navy;
+    border-color: blue;
+    cursor: pointer;
+    color: white;
+}
+
+.modal-content button:active {
+    transition:0s all;
+    background-color: black;
+}
+
+.close {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+.close:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Estilos para telas menores */
+    .container {
+        max-width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        /* Outros ajustes de estilo para cards em telas menores */
+    }
+
+    .card img {
+        width: 100%;
+        /* Outros ajustes de estilo para cards em telas menores */
+    }
+
+    .card p {
+        font-size: larger;
+        max-width: 70%;
+    }
+
+    .card-button {
+        position: static;
+        font-size: large;
+        bottom: 14%;
+        left: 86%;
+    }
+
+    .organizador {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        height: 69vh;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .modal-content img {
+        width: 92%;
+        height: 60%;
+        max-width: 100%;
+        margin-top: 40px;
+        position: fixed;
+        top: 0;
+        margin-left: 3.7%;
+    }
+
+    .modal-content p {
+        margin: 10px 0px;
+        padding: 0px;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        font-size: x-large;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .modal-content button {
+        background-color: rgb(209, 209, 209);
+        margin: 10px 5px;
+        border-radius: 10px;
+        height: 8vh;
+        transition: none;
+        width: 40vw;
+        border-width: 7px;
+    }
+    
+    .modal-content button:hover {
+        background-color: rgb(209, 209, 209);;
+        border-color:buttonborder;
+        cursor: pointer;
+        color: black;
+
+    }
+    
+    .modal-content button:active {
+        transition:0s all;
+        background-color:#888787;
+    }
+    
+    .botoesetexto {
+        flex: 1;
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .botoes {
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .botoes p {
+        font-size: large;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+

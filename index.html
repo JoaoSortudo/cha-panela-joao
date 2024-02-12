@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes</title>
+    <link rel="stylesheet" href="style-teste.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="present-list">
+        <!-- As fileiras e cards serão gerados dinamicamente com JavaScript -->
+        <script src="script-teste.js"></script>
+    </div>
+
+    <!-- Criando a div pro efeito de janela modal nos cards-->
+    <div class="modal" id="janela-modal">
+        <div class= "modal-content" id="modal-content">
+            <span class="close" id="close">&times;</span>
+            <img id="modal-image" alt="">
+            <div class="botoesetexto">
+                <p id="modal-name"></p>
+                <div class="botoes">
+                    <button class="olhando">
+                        <p>de olho</p>
+                    </button>
+                    <button class="quero">
+                        <p>quero esse!</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
